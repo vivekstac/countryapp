@@ -7,7 +7,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/countryapp">
       <Routes>
         <Route path="/" element={<Form />} />
         <Route
