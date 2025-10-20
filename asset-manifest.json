@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/countryapp/static/css/main.91f041a3.css",
-    "main.js": "/countryapp/static/js/main.27ead1b5.js",
+    "main.css": "/countryapp/static/css/main.7e733210.css",
+    "main.js": "/countryapp/static/js/main.2adfdc28.js",
     "static/media/facebook.svg": "/countryapp/static/media/facebook.82f6068290189236499146051ed24090.svg",
     "static/media/login-banner-cropped.svg": "/countryapp/static/media/login-banner-cropped.ef38c03d0ee0792703a526562908185d.svg",
     "static/media/google.svg": "/countryapp/static/media/google.2b1b55c452ebaad2fe249d77c287d933.svg",
@@ -13,11 +13,11 @@
     "index.html": "/countryapp/index.html",
     "static/media/prev-arrow.svg": "/countryapp/static/media/prev-arrow.137710acab9f0e212db345c00a847ada.svg",
     "static/media/eye.svg": "/countryapp/static/media/eye.55cd39e3b58b49c1e56492cdc6a54b5b.svg",
-    "main.91f041a3.css.map": "/countryapp/static/css/main.91f041a3.css.map",
-    "main.27ead1b5.js.map": "/countryapp/static/js/main.27ead1b5.js.map"
+    "main.7e733210.css.map": "/countryapp/static/css/main.7e733210.css.map",
+    "main.2adfdc28.js.map": "/countryapp/static/js/main.2adfdc28.js.map"
   },
   "entrypoints": [
-    "static/css/main.91f041a3.css",
-    "static/js/main.27ead1b5.js"
+    "static/css/main.7e733210.css",
+    "static/js/main.2adfdc28.js"
   ]
 }
