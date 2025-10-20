@@ -13,7 +13,10 @@ function Login() {
         userName: "",
         password: "",
     });
-    const [error, setError] = useState('');
+    const [error, setError] = useState({
+        userName: "",
+        password: "",
+    });
     const [showPw, setShowPwd] = useState(false)
     const navigate = useNavigate();
 
@@ -25,23 +28,23 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const { userName, password } = formData;
 
-        if (!userName) {
-            setError("Please enter username");
-            return;
+        let newError = { userName: "", password: "" };
+
+        if (!formData.userName) {
+            newError.userName = "Username is required";
         }
 
-        if (!validatePassword(password)) {
-            setError(
-                "Must be 8+ chars, 1 Cap, 1 Num, & 1 Symbol"
-            );
-            return;
+        if (!validatePassword(formData.password)) {
+            newError.password = "Must be 8+ chars, 1 Cap, 1 Num, & 1 Symbol";
         }
 
-        setError("");
-        localStorage.setItem("user", userName);
-        navigate("/home");
+        setError(newError);
+
+        if (!newError.userName && !newError.password) {
+            localStorage.setItem("user", formData.userName);
+            navigate("/home");
+        }
     };
 
     const handleChange = (e) => {
@@ -59,9 +62,17 @@ function Login() {
                 <h4 className="mb-4">New User? <span className="create-txt">&nbsp; Create an Account</span></h4>
                 <Form className="form-control-main" onSubmit={handleSubmit}>
                     <Form.Group className="mb-1">
-                        <Form.Control name="userName" className="form-input" value={formData.userName || ''} placeholder="Username or Email" onChange={(e) => handleChange(e)} />
-                        <Form.Control.Feedback type="invalid">{""}</Form.Control.Feedback>
+                        <Form.Control
+                            name="userName"
+                            className="form-input" value={formData.userName || ''}
+                            placeholder="Username or Email"
+                            onChange={(e) => handleChange(e)}
+                            isInvalid={error.userName} />
                     </Form.Group>
+
+                    {error.userName && <div className="text-danger pwd-error-txt text-wrap text-break">
+                        {error.userName}
+                    </div>}
 
                     <Form.Group className="mb-1 position-relative">
                         <Form.Control name="password"
@@ -70,13 +81,13 @@ function Login() {
                             value={formData.password || ''}
                             placeholder="Enter password"
                             onChange={(e) => handleChange(e)}
-                            isInvalid={error} />
+                            isInvalid={error.password} />
                         {formData.password && <div className="pwd-eye-icon" onClick={() => setShowPwd(!showPw)}><img src={Eyes} alt="eye" /></div>}
 
                     </Form.Group>
 
-                    {error && <div className="text-danger pwd-error-txt text-wrap text-break">
-                        {error}
+                    {error.password && <div className="text-danger pwd-error-txt text-wrap text-break">
+                        {error.password}
                     </div>}
 
                     <Form.Check

@@ -51,6 +51,10 @@
       &.is-invalid {
         background-image: none;
         border-color: #dc3545 !important;
+
+        &::placeholder {
+          color: #dc3545;
+        }
       }
     }
 
@@ -121,8 +125,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 100%;
   max-width: 280px;
   margin: 20px auto;
 
