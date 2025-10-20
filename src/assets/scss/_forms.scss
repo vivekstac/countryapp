@@ -1,0 +1,258 @@
+.form-container {
+  justify-content: space-between;
+  padding: 20px;
+  width: 70% !important;
+  max-width: 70% !important;
+
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  h4 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: #3d3d3d;
+  }
+
+  .create-txt {
+    color: #587fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .form-control-main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-input {
+      width: 280px;
+      height: 48px;
+      font-size: 16px;
+      border: 2px solid #3e3e3e;
+      font-weight: 600;
+      color: #3d3d3d;
+      line-height: 0;
+      padding: 10px 10px;
+      border-radius: 0;
+
+      &::placeholder {
+        font-weight: 600;
+        color: #3d3d3d;
+        line-height: 0;
+        margin-top: 2px;
+      }
+
+      &:invalid,
+      &.is-invalid {
+        background-image: none;
+        border-color: #dc3545 !important;
+      }
+    }
+
+    .form-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      cursor: pointer;
+
+      .form-check-input {
+        width: 32px;
+        height: 32px;
+        border: 2px solid #000000;
+        margin-top: 0;
+        margin-right: 10px;
+        border-radius: 0;
+        background-color: #f2f2f2;
+
+        &:checked {
+          background-color: #3d3d3d;
+        }
+      }
+
+      label {
+        font-weight: 600;
+        font-size: 16px;
+        color: #3d3d3d;
+        cursor: pointer;
+      }
+    }
+
+    button {
+      width: 280px;
+      height: 48px;
+      background-color: #3d3d3d;
+      color: #fcfcfc;
+      border-radius: 0;
+      border: none !important;
+      box-shadow: none !important;
+
+      &:active {
+        background-color: #3d3d3dc8 !important;
+        color: #fcfcfc !important;
+      }
+    }
+  }
+
+  .pwd-eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .pwd-error-txt {
+    position: relative;
+    font-size: 12px;
+    line-height: 0;
+    max-width: 280px;
+    top: -5px;
+  }
+}
+
+.sign-in-container {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 280px;
+  margin: 20px auto;
+
+  .divider-text {
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #3d3d3d;
+    white-space: nowrap;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+    text-align: center;
+  }
+  .divider-line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #cfcfcf;
+    flex-shrink: 1;
+  }
+}
+
+.right-container {
+  img {
+    width: 300px;
+    height: 510px;
+    object-fit: cover;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+  gap: 10px;
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-container {
+    justify-content: center;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    .create-txt {
+      font-size: 16px;
+    }
+
+    .form-control-main {
+      .form-input {
+        font-size: 16px;
+      }
+
+      button {
+        width: 280px;
+        height: 48px;
+        background-color: #3d3d3d;
+        color: #fcfcfc;
+        border-radius: 0;
+        border: none;
+      }
+    }
+  }
+
+  .sign-in-container {
+    width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+
+    .divider-text {
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: bold;
+      color: #3d3d3d;
+      white-space: nowrap;
+      line-height: 19px;
+      letter-spacing: 0.3px;
+      text-align: center;
+    }
+    .divider-line {
+      flex-grow: 1;
+      height: 2px;
+      background-color: #cfcfcf;
+      flex-shrink: 1;
+    }
+  }
+
+  .right-container {
+    display: none;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0 10px;
+    gap: 10px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-container {
+    width: 85% !important;
+    max-width: 85% !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .form-container {
+    width: 80% !important;
+    max-width: 80% !important;
+  }
+}

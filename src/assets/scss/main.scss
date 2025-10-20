@@ -1,0 +1,30 @@
+@use "forms";
+@use "home";
+@use "copyrights";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Yi&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  color: #3d3d3d;
+  letter-spacing: unset;
+  font-family: "Noto Sans Yi", sans-serif !important;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.form-control,
+.form-check-input {
+  &:focus,
+  &:checked[type="checkbox"] {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: default;
+}
